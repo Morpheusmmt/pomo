@@ -2,7 +2,7 @@
   "name": "pomodoro-app",
   "version": "1.0.0",
   "description": "Aplicativo Pomodoro utilizando React, TypeScript e Vite",
-  "main": "index.js",
+  "main": "App.tsx",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
