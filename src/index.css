@@ -6,19 +6,21 @@
 }
 
 body {
-  font-family: sans-serif;
-  background: #41e1ba;
+  font-family: 'Poppins', sans-serif;
+  background: #ececec;
   transition: background-color 300ms ease-in-out;
-  line-height: 1.5
+  line-height: 1.6;
+  color: #333;
 }
 
 .container {
   max-width: 640px;
   margin: 0 auto;
+  padding: 20px;
 }
 
 .working {
-  background: #EF5D50;
+  background: #ef5d50;
 }
 
 .hidden {
@@ -28,42 +30,83 @@ body {
 .pomodoro {
   background: #fff;
   margin: 50px 20px;
-  padding: 20px;
-  border-radius: 4px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.pomodoro:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .pomodoro h2 {
-  font-size: 24px;
-  text-align: center;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 15px;
 }
 
 .pomodoro .timer {
   font-size: 6rem;
-  text-align: center;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px;
 }
 
 .pomodoro .controls {
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 20px;
 }
 
 .pomodoro button {
   background: #41e1ba;
   border: none;
   cursor: pointer;
-  padding: 10px 25px;
-  color: #000;
-  transition: background-color 300ms ease-in-out;
-  margin: 20px auto;
+  padding: 15px 30px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: background-color 300ms ease, transform 200ms ease;
+  width: 120px;
+  text-transform: uppercase;
+}
+
+.pomodoro button:focus {
+  outline: 2px solid #37c0a6;
+}
+
+.pomodoro button:hover {
+  background-color: #37c0a6;
+  transform: scale(1.05);
 }
 
 .working .pomodoro button {
-  background: #EF5D50;
+  background: #ef5d50;
   color: #fff;
 }
 
 .pomodoro .details {
   margin: 20px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+@media (max-width: 480px) {
+  .pomodoro {
+    margin: 20px 10px;
+    padding: 25px;
+  }
+
+  .pomodoro .timer {
+    font-size: 5rem;
+  }
+
+  .pomodoro button {
+    width: 100%;
+    padding: 15px 0;
+  }
 }
