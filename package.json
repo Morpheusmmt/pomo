@@ -1,47 +1,38 @@
 {
-  "name": "typescript-pomodoro-react",
-  "version": "0.1.0",
-  "private": true,
+  "name": "pomodoro-app",
+  "version": "1.0.0",
+  "description": "Aplicativo Pomodoro utilizando React, TypeScript e Vite",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",                 // Comando para iniciar o servidor de desenvolvimento
+    "build": "vite build",        // Comando para construir o projeto para produção
+    "start": "vite preview",      // Comando para servir a build para testes locais
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx", // Opcional, caso queira configurar ESLint
+    "format": "prettier --write ." // Opcional, para formatar o código usando Prettier
+  },
+  "keywords": [
+    "pomodoro",
+    "vite",
+    "react",
+    "typescript",
+    "time-management"
+  ],
+  "author": "Maida Martins dos Santos", // Seu nome ou equipe
+  "license": "MIT",                     // Licença do projeto
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "@types/jest": "^24.9.1",
-    "@types/node": "^12.12.48",
-    "@types/react": "^16.9.41",
-    "@types/react-dom": "^16.9.8",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
-    "typescript": "^3.7.5"
+    "react": "^18.2.0",                 // React
+    "react-dom": "^18.2.0"             // React DOM
   },
   "devDependencies": {
-    "eslint-plugin-react": "^7.20.3",
-    "@typescript-eslint/eslint-plugin": "^3.3.0",
-    "@typescript-eslint/parser": "^3.3.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "prettier": "^2.0.5"
+    "@vitejs/plugin-react": "^4.0.0",  // Plugin React para Vite
+    "typescript": "^5.0.0",            // TypeScript
+    "vite": "^4.0.0",                  // Vite
+    "eslint": "^8.40.0",               // Opcional: ESLint para linting
+    "eslint-plugin-react": "^7.33.0",  // Opcional: Plugin do ESLint para React
+    "prettier": "^3.0.0"               // Opcional: Prettier para formatação de código
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "type": "module",
+  "engines": {
+    "node": ">=16.0.0"                 // Versão mínima do Node.js recomendada
   }
 }
